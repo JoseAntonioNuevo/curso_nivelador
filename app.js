@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 8080
 
 var cowsay = require("cowsay");
 
@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
         e : "oO",
         T : "U "
     }));
-  })
+  });
 
 app.post('/', (req, res) => {  
     res.send(cowsay.say({
@@ -18,7 +18,7 @@ app.post('/', (req, res) => {
         e : "oO",
         T : "U "
     }));
-  }) 
+  }); 
 
 
 app.listen(port, () => {
